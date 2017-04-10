@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重的方法</title>
+</head>
+<body>
+<script>
+   //第一种方法；
+
+   Array.prototype.unique1 = function(){
+       var res = [this[0]];
+       for(var i = 1; i < this.length; i++){
+           var repeat = false;
+           for(var j = 0; j < res.length; j++){
+               if(this[i] == res[j]){
+                   repeat = true;
+                   break;
+               }
+           }
+           if(!repeat){
+               res.push(this[i]);
+           }
+       }
+       return res;
+   }
+   var arr = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0]
+   alert(arr.unique1());
+
+    //第二种方法；
+   Array.prototype.unique2 = function(){
+       this.sort(); //先排序
+       var res = [this[0]];
+       for(var i = 1; i < this.length; i++){
+           if(this[i] !== res[res.length - 1]){
+               res.push(this[i]);
+           }
+       }
+       return res;
+   }
+   var arr1 = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0]
+   console.log(arr1.unique2())
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
