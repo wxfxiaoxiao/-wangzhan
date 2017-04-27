@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div class="list" >
+    <h4>基本信息</h4>
+    <p>活动名称：春暖花开4月生日会</p>
+    <p>活动时间：2017年11月12日</p>
+    <p>地址：南风里小区 3号楼 4门 301</p>
+    <h6>请输入栏目名称</h6>
+
+    <label class="item_label">
+        <span style="width: 960px; min-height: 300px; display:inline-block;background: url('./img/imgs1.png') no-repeat center center">
+            <img src="" id="uploadPreview" style="width: 100%; height: 100%;display:inline-block">
+        </span>
+        <input type="file" name="file" id="postFile" >
+        <span id="error_text" style="display: none;">提示</span>
+    </label>
+
+    <h5>居民预约</h5>
+    <div class="half">
+        <div class="test">
+            <p>姓名</p>
+            <input type="text" placeholder="请输入您的姓名">
+        </div>
+        <div class="test">
+            <p>电话</p>
+            <input type="text" placeholder="请输入您的电话">
+        </div>
+    </div>
+    <div class="test1">
+        <p>备注</p>
+        <input type="text" placeholder="请留言">
+    </div>
+    <form action="#">
+        <button>发送</button>
+    </form>
+</div>
+<div ui-view></div>
+<script>
+    var _alertMsg = document.getElementById('error_text');
+
+    document.getElementById('postFile').onchange = function() {
+
+        var val = this.value;
+
+        //设定可上传的格式
+        var upLoadType = '.jpg,.gif,.bmp,.png';
+        //从字符串中抽出最后一次出现.之后的字符，并且转换成小写
+        var fileExt = val.substr(val.lastIndexOf(".")).toLowerCase();
+        //查找后缀名是否符合条件，如果符合返回>=0，如果不符合则返回负数;
+        var result = upLoadType.indexOf(fileExt);
+
+        if (this.files.length === 0) { return; }
+        //如果只有一个文件则只需要访问这个FileList对象中的第一个元素.
+        var oFile = this.files[0];
+        if (oFile.size / 1024 < 100) {
+            _alertMsg.innerHTML = "<font style='color:blue'>√</font>"
+            _alertMsg.style.display = 'inline-block';
+        };
+        if (result < 0) {
+            _alertMsg.innerHTML = "请输入正确格式:" + upLoadType;
+            _alertMsg.style.display = 'inline-block';
+        } else{
+            _alertMsg.innerHTML = "<font style='color:blue'>√</font>";
+            _alertMsg.style.display = 'inline-block';
+        };
+
+        var oFReader = new FileReader();
+
+        // 当图像文件加载后,转换成一个data:URL,传递到onload回调函数中
+        oFReader.readAsDataURL(oFile);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    };
+</script>
+</body>
+</html>

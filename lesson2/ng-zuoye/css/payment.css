@@ -1,0 +1,192 @@
+.header {
+  width: 100%;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  border-bottom: 1px solid #e5e5e5;
+  display: -webkit-flex;
+  position: relative; }
+  .header a {
+    color: #000;
+    position: absolute; }
+    .header a:nth-child(1) {
+      left: 0.15rem; }
+    .header a:nth-child(2) {
+      left: 40%;
+      font-size: 0.16rem; }
+    .header a:nth-child(3) {
+      right: 0.15rem; }
+
+.nav {
+  padding: 13px 30px 13px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative; }
+  .nav h3 {
+    padding-left: 10px;
+    box-sizing: border-box; }
+    .nav h3 span {
+      color: #333;
+      font-size: 0.13rem;
+      margin-left: 0.2rem; }
+  .nav p {
+    margin-top: 0.12rem; }
+    .nav p i {
+      margin-right: 0.05rem; }
+    .nav p span {
+      color: #333; }
+  .nav .right {
+    position: absolute;
+    right: 10px;
+    top: 40%; }
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: skyblue; }
+
+.section {
+  flex: 1;
+  overflow-y: scroll; }
+  .section .title {
+    width: 100%;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    padding-top: 0.13rem;
+    padding-left: 0.15rem;
+    box-sizing: border-box; }
+    .section .title img {
+      width: 0.2rem;
+      height: 0.2rem; }
+    .section .title span {
+      font-size: 0.13rem;
+      color: #000;
+      padding-left: 0.06rem; }
+  .section dl {
+    display: -webkit-flex;
+    margin-top: 0.1rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem; }
+    .section dl dt {
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid #ccc; }
+      .section dl dt img {
+        width: 100%;
+        height: 100%; }
+    .section dl dd {
+      flex: 1;
+      margin-left: 0.1rem;
+      padding-top: 0.1rem;
+      box-sizing: border-box; }
+      .section dl dd .box {
+        display: -webkit-flex;
+        margin-top: 0.28rem;
+        -webkit-justify-content: space-between; }
+        .section dl dd .box h3 {
+          color: #fc4141; }
+          .section dl dd .box h3 span {
+            font-size: 0.14rem; }
+        .section dl dd .box p {
+          text-decoration: line-through;
+          color: #999; }
+        .section dl dd .box .box_2 span {
+          display: inline-block;
+          width: 0.25rem;
+          line-height: 0.25rem;
+          border: 1px solid #ccc;
+          text-align: center;
+          background: #fff; }
+  .section .tatal {
+    margin-top: 0.12rem;
+    padding-left: 0.15rem; }
+    .section .tatal p {
+      margin-top: 0.1rem;
+      color: #666; }
+      .section .tatal p span {
+        float: right;
+        padding-right: 0.15rem; }
+      .section .tatal p .price {
+        color: #fc4141;
+        font-weight: bolder;
+        font-size: 0.14rem; }
+  .section .list {
+    background: #fff; }
+    .section .list li {
+      line-height: 0.55rem;
+      padding-left: 0.15rem;
+      padding-right: 0.15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5e5;
+      position: relative; }
+      .section .list li i {
+        float: right; }
+      .section .list li label {
+        position: absolute;
+        right: 0.15rem; }
+        .section .list li label input {
+          display: none; }
+        .section .list li label span {
+          display: inline-block;
+          width: 0.55rem;
+          height: 0.3rem;
+          border: 1px solid #d4d8d5;
+          border-radius: 0.2rem;
+          margin-top: 0.1rem;
+          position: relative; }
+          .section .list li label span b {
+            position: absolute;
+            left: 0;
+            width: 0.28rem;
+            height: 0.28rem;
+            border: 1px solid #d4d8d5;
+            border-radius: 50%;
+            transition: left 0.3s; }
+      .section .list li .toggle-radio input:checked + span b {
+        left: 0.2rem;
+        background: skyblue; }
+      .section .list li .toggle-radio input:checked + span {
+        background: green;
+        border: 1px solid blue; }
+
+.footer {
+  height: 0.6rem;
+  border-top: 1px solid #ccc;
+  display: -webkit-flex; }
+  .footer .btn {
+    display: block;
+    height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    background: #fc4141;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0.1rem;
+    box-sizing: border-box; }
+  .footer div {
+    flex: 1;
+    margin-right: 10px; }
+    .footer div h2 {
+      color: #fc4141;
+      text-align: right;
+      margin-top: 0.05rem; }
+    .footer div p {
+      text-align: right;
+      margin-top: 6px; }
+
+.pos {
+  position: relative; }
+  .pos p {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0.15rem;
+    height: 0.36rem;
+    line-height: 0.36rem;
+    width: 90%;
+    background-color: #333333;
+    opacity: 0.5;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center; }
+
+/*# sourceMappingURL=payment.css.map */

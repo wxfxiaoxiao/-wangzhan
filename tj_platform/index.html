@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <ul class="nav nav-pills navbar-right form">
+            <li role="presentation" class="active"><a href="#">注册</a></li>
+            <li role="presentation"><a href="#">登录</a></li>
+            <li role="presentation"><a href="#">通知</a></li>
+            <li role="presentation"><a href="#">设置</a></li>
+        </ul>
+    </header>
+    <div class="box" style="clear: both">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">三鑫智慧社区</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav first">
+                        <li class="up" ui-sref="first"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                        <li class="active up"><a href="#" ui-sref="group">社区团体活动服务 <span ></span></a></li>
+                        <li class="up"><a href="#" ui-sref="party">党组织活动服务</a></li>
+                        <li class="up"><a href="#" ui-sref="resident">居民自治活动服务</a></li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <ol class="breadcrumb">
+        <li  class="active">当前位置:首页</li>
+        <li  class="active">社区养老</li>
+        <li class="active">离休退休</li>
+    </ol>
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <dl class="item active">
+                <dt>
+                    <img src="./img/icons.png" alt="First slide">
+                </dt>
+                <dd>
+                    社区生日会
+                    <p>提供社区五保供养申请的办理指南、注意事项、办理机构等相关的服务。</p>
+                </dd>
+            </dl>
+            <dl class="item">
+                <dt>
+                    <img src="./img/icons.png" alt="First slide">
+                </dt>
+                <dd>
+                    社区生日会
+                    <p>提供社区五保供养申请的办理指南、注意事项、办理机构等相关的服务。</p>
+                </dd>
+            </dl>
+
+
+            <dl class="item">
+                <dt>
+                    <img src="./img/icons.png" alt="First slide">
+                </dt>
+                <dd>
+                    社区生日会
+                    <p>提供社区五保供养申请的办理指南、注意事项、办理机构等相关的服务。</p>
+                </dd>
+            </dl>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;</a>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="content">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active" ui-sref="activity"><a href="#info">活动介绍</a></li>
+                    <li role="presentation"><a href="#name" ui-sref="look">查看活动</a></li>
+                    <li role="presentation"><a href="#resident" ui-sref="subscribe">活动总结</a></li>
+                </ul>
+            </div>
+            <div ui-view></div>
+        </div>
+        <div class="col-md-2">
+            <nav id="navbar-example2" class="navbar nav-side">
+                <div class="timeline-wrap clearfix">
+                    <span class="circle top"></span>
+                    <span class="circle bottom"></span>
+                    <ul class="nav navbar-nav time-line">
+                        <li class="active"><a href="#info" ui-sref="activity">基本信息</a></li>
+                        <li class=""><a href="#name" ui-sref="look">请输入栏目名称</a></li>
+                        <li class="dropdown"><a href="#resident" ui-sref="subscribe">居民预约</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="css/bootstrap/dist/js/jquery.js"></script>
+<script src="css/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.js"></script>
+<script src="js/config.js"></script>
+
+</body>
+</html>
